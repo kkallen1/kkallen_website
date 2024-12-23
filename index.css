@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;                    /* 讓容器的高度為螢幕高度 */
+    font-family: Arial, sans-serif;
+    background-color: #47525e;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;  /* 左右兩邊區塊寬度相同，中間區塊為 3 倍寬 */
+    align-items: center;  /* 垂直置中 */
+    padding: 10px 20px;
+    background-color: #57606b;
+    color: white;
+    position: fixed;       /* 固定在頁面上方 */
+    top: 0;                /* 置頂 */
+    width: 100%;           /* 使導航列寬度佔滿整個頁面 */
+    z-index: 1000;         /* 確保導航列在所有元素之上 */
+}
+/* 左邊的 logo */
+.logo-left img {
+    height: 40px;
+}
+/* 中間的導航選單 */
+.menu {
+    display: flex;
+    justify-content: center; /* 讓選單居中 */
+    gap: 20px;
+}
+.menu a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+.menu a:hover {
+    background-color: #0099cc;
+}
+
+/*內文*/
+.conner {
+    display: flex;
+    justify-content: center;          /* 使容器在畫面上水平居中 */
+    align-items: center;              /* 使容器在畫面上垂直居中 */
+    height: 100vh;                    /* 讓容器的高度為螢幕高度 */
+    background-color: transparent;
+}
+.container {
+    width: 80%;
+    max-width: 1200px; 
+    background-color: transparent;
+    border-radius: 8px;
+    display: flex;
+    padding: 20px;
+    justify-content: space-between; /* 讓左側和右側內容分開 */
+    gap: 30px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center; /* 使文字在區塊中間 */
+    margin-bottom: 20px; /* 給標題和內容之間一些空間 */
+    color: white; /* 顏色可以使用您希望的顏色，例如藍色 */
+}
+
+/* 左側 */
+.left-side {
+    width: 60%;
+    padding: 20px;
+    text-align: center;
+    background-color: #364049;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.left-side img {
+    border-radius: 50%;   /* 將圖片變為圓形 */
+    width: 120px;
+    height: 120px;
+    object-fit: cover;    /* 讓圖片保持比例填滿圓形區域 */
+    margin-bottom: -10px;  /* 與下面內容的距離 */
+}
+
+.social-links {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    margin: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.social-links a img {
+    border-radius: 0%;
+    width: 45px;
+    height: 45px;
+}
+
+.about_me {
+    font-size: 16px;
+    color: white;
+    margin-bottom: 30px;  /* 與下面內容的距離 */
+}
+
+/* 右側 */
+.right-side {
+    width: 40%;
+    padding: 20px;
+    background-color: #364049;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: #0099cc;
+}
+
+.timeline .arrow-down {
+    position: absolute;
+    left: 6px;            /* 對齊時間軸 */
+    bottom: -20px;         /* 讓箭頭出現在時間軸下方 */
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;  /* 透明邊框 */
+    border-right: 5px solid transparent; /* 透明邊框 */
+    border-top: 10px solid #0099cc;      /* 藍色的箭頭 */
+    top: 100%;             /* 使箭頭與時間軸底部連接 */
+}
+
+.event {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.event .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #0099cc;
+    position: absolute;
+    left: -29px;
+    top: 50%;
+    transform: translateY(-50%);  /* 讓圓點精確置中於時間軸 */
+}
+
+.event .content {
+    margin-left: 40px;
+    padding: 10px;
+    background-color: #9199a3;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.event .date {
+    font-size: 14px;
+    color: #777;
+}
